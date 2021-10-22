@@ -19,12 +19,10 @@ export default class SmoothScroll {
       link.addEventListener('click', this.scrollToSection);
     });
   }
-
   init() {
     if (this.innerLinks.length) {
       this.addLinkEvent();
     }
     return this;
   }
-  
 };
