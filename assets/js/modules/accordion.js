@@ -17,9 +17,11 @@ export default class initAccordion {
   }
 // init function
   init() {
-    if(this.accordionList.length);
+    if(this.accordionList.length) {
     // add first item
-    this.toggleAccordion(this.accordionList[0]);
-    this.addAccordionEvent();
+      this.toggleAccordion(this.accordionList[0]);
+      this.addAccordionEvent();
+    }
+    return this;
   }
 };
