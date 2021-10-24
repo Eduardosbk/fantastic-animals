@@ -25,7 +25,6 @@ export default class ScrollAnima {
     }
     );
   }
-
   init() {
     if (this.sections.length) {
       this.getDistance();
@@ -34,7 +33,6 @@ export default class ScrollAnima {
     }
     return this;
   }
-
   killAnimation() {
     window.removeEventListener('scroll', this.checkDistance);
   }
