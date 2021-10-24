@@ -5,10 +5,10 @@ import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import DropdownMenu from './modules/dropdown.js';
 import MenuMobile from './modules/menu-mobile.js';
-import initOperation from './modules/operation.js';
 import fetchAnimals from './modules/fetch-animais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 import ScrollAnima from './modules/scroll-anima.js';
+import Operation from './modules/operation.js';
 
 const smoothscroll = new SmoothScroll('[data-menu="smooth"]');
 smoothscroll.init();
@@ -38,4 +38,5 @@ fetchAnimals('../../../animaisapi.json', '.numbers-grid');
 
 fetchBitcoin('https://blockchain.info/ticker', '.btc-price');
 
-initOperation();
+const operation = new Operation('[data-week]', 'open');
+operation.init();
