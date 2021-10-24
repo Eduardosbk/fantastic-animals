@@ -173,7 +173,8 @@ body {
 
 .dados li {
   margin-bottom: 1rem;
-  font-family: Helvetica, Arial;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
 }
 
 .dados li::before {
