@@ -8,7 +8,7 @@ import initMenuMobile from './modules/menu-mobile.js';
 import initOperation from './modules/operation.js';
 import fetchAnimals from './modules/fetch-animais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
-import initAnimationScroll from './modules/animation-scroll.js';
+import ScrollAnima from './modules/scroll-anima.js';
 
 const smoothscroll = new SmoothScroll('[data-menu="smooth"]');
 smoothscroll.init();
@@ -25,6 +25,9 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
+const animaScroll = new ScrollAnima('[data-anima="scroll"]');
+animaScroll.init();
+
 fetchAnimals('../../../animaisapi.json', '.numbers-grid');
 
 fetchBitcoin('https://blockchain.info/ticker', '.btc-price');
@@ -32,4 +35,3 @@ fetchBitcoin('https://blockchain.info/ticker', '.btc-price');
 initDropdownMenu();
 initMenuMobile();
 initOperation();
-initAnimationScroll();
