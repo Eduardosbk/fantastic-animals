@@ -11,18 +11,15 @@ export default function fetchAnimals(url, target) {
     `;
     return div;
   };
-
   const numbersGrid = document.querySelector(target);
   function fillAnimals(animal) {
     const divAnimal = createAnimal(animal);
     numbersGrid.appendChild(divAnimal);
   }
-
   function animaNumbersanimals() {
     const animaNumbers = new AnimaNumbers('[data-number]', '.numbers', 'ativo');
     animaNumbers.init();
   }
-
   // bring the data animals throught a json file
   async function createAnimals() {
     try {
@@ -36,7 +33,6 @@ export default function fetchAnimals(url, target) {
       console.log(err);
     }
   }
-
   return createAnimals();
 };
 
