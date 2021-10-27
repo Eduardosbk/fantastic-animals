@@ -9,6 +9,7 @@ import fetchAnimals from './modules/fetch-animais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 import ScrollAnima from './modules/scroll-anima.js';
 import Operation from './modules/operation.js';
+import SlideNav from './modules/slide.js';
 
 const smoothscroll = new SmoothScroll('[data-menu="smooth"]');
 smoothscroll.init();
@@ -40,3 +41,7 @@ fetchBitcoin('https://blockchain.info/ticker', '.btc-price');
 
 const operation = new Operation('[data-week]', 'open');
 operation.init();
+
+const slide = new SlideNav('.slide', '.wrapper');
+slide.init();
+slide.addControl('.custom-controls');
