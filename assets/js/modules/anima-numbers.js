@@ -1,7 +1,8 @@
+
 export default class AnimaNumbers {
-  constructor(numbers, oberverTarget, observerClass) {
+  constructor(numbers, observerTarget, observerClass) {
     this.numbers = document.querySelectorAll(numbers);
-    this.oberverTarget = document.querySelector(oberverTarget);
+    this.observerTarget = document.querySelector(observerTarget);
     this.observerClass = observerClass;
 
     this.handleMutation = this.handleMutation.bind(this);
@@ -12,7 +13,7 @@ export default class AnimaNumbers {
     const increment = Math.floor(total / 100);
     let start = 0;
     const timer = setInterval(() => {
-      start =+ increment;
+      start += increment;
       number.innerText = start;
       if (start > total) {
         number.innerText = total;
@@ -32,7 +33,7 @@ export default class AnimaNumbers {
   }
   addMutationObserver() {
     this.observer = new MutationObserver(this.handleMutation);
-    this.observer.observe(this.oberverTarget, { attributes: true });
+    this.observer.observe(this.observerTarget, { attributes: true });
   }
   init() {
     if (this.numbers.length && this.observerTarget) {

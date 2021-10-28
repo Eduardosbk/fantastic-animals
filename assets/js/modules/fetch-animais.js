@@ -16,7 +16,7 @@ export default function fetchAnimals(url, target) {
     const divAnimal = createAnimal(animal);
     numbersGrid.appendChild(divAnimal);
   }
-  function animaNumbersanimals() {
+  function animaNumbersAnimals() {
     const animaNumbers = new AnimaNumbers('[data-number]', '.numbers', 'ativo');
     animaNumbers.init();
   }
@@ -28,7 +28,7 @@ export default function fetchAnimals(url, target) {
       // turn the json into a response
       const animaisJSON = await animaisResponse.json();
       animaisJSON.forEach((animal) => fillAnimals(animal));
-      animaNumbersanimals();
+      animaNumbersAnimals();
     } catch (err) {
       console.log(err);
     }
