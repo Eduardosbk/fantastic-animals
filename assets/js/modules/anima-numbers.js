@@ -40,5 +40,5 @@ export default class AnimaNumbers {
       this.addMutationObserver();
     }
     return this;
-  }
+  };
 };
